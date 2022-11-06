@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tela de Cadastro</title>
+</head>
+<body>
+    <header>
+        <input type="button" value="Login" onclick="abrirTelaDeLogin()">
+        <input type="button" value="Cadastre-se" onclick="abrirTelaDeCadastro()">
+    </header>
+    <section>
+        <div id="telaDeLogin">
+            <label>Nome:</label>
+            <input type="text"  name="nome" id="nome" placeholder="Nome">
+            <label>Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <label>Senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="Senha">
+            <input type="submit" value="Entrar" onclick="logar()">
+        </div>
+        <div id="telaDeCadastro">
+            <label>Nome:</label>
+            <input type="text" name="nome" id="cadastroNome">
+            <label>Email:</label>
+            <input type="email" name="email" id="cadastroEmail">
+            <label>Senha:</label>
+            <input type="password" name="senha" id="cadastroSenha"><hr>
+            <label>Telefone:</label>
+            <input type="tel" name="telefone" id="cadastroTelefone">
+            <label>Data:</label>
+            <input type="date" name="data" id="cadastroData">
+            
+            <label>Estado</label>
+            <select name="estado" id="cadastroEstado">
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="BA">DF</option>
+                <option value="">BA</option>
+                <option value="PB">MG</option>
+
+            <input type="radio" name="sexo" id="cadastroMasculino">
+            <label>Masculino</label>
+            <input type="radio" name="sexo" id="cadastroFeminino">
+            <label>Feminino</label>
+            
+            </select>
+
+            <input type="submit" value="Cadastrar" onclick="dadosDeCadastro()">
+        </div>
+        <div id="listaDeCadastro">
+
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

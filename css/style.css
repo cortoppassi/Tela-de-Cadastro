@@ -1,0 +1,50 @@
+body {
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/834/602/559/computer-keyboards-wallpaper-thumb.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin: 0;
+    
+}
+
+header {
+ display: flex;
+ margin: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+#telaDeLogin {
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    color: white;
+}
+
+#telaDeCadastro {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    width: 90%;
+    color: white;
+}
+
+footer {
+    /* background-image: url(https://static.vecteezy.com/ti/fotos-gratis/p1/3188012-dark-wood-table-texture-wallpaper-and-background-gr%C3%A1tis-foto.jpg); */
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
