@@ -48,3 +48,29 @@ footer {
     position: absolute;
     bottom: 0;
 }
+
+#popup {
+    display: none;
+    
+    width: 90%;
+    height: 30em;
+    background-color: aliceblue;
+    box-shadow: 10px 10px 10px rgb(88, 88, 88);
+    overflow: auto;
+}
+
+#barraTarefas {
+    display: flex;
+    justify-content: end;
+    border: solid 1px;
+    background-color: rgb(57, 57, 57);
+    padding: 3px; 
+}
+
+#sair {
+    border-radius: 3px;
+}
+
+#sair:hover {
+ background-color: red;
+}

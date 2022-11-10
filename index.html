@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,14 @@
         <input type="button" value="Cadastre-se" onclick="abrirTelaDeCadastro()">
     </header>
     <section>
+        <div id="popup">
+            <div id="barraTarefas">
+                <button id="sair" onclick="sair()">X</button>
+            </div>
+
+            <h1>Dados Cadastrais</h1>
+        </div>
+
         <div id="telaDeLogin">
             <label>Nome:</label>
             <input type="text"  name="nome" id="nome" placeholder="Nome">
@@ -56,7 +64,6 @@
         </div>
     </section>
     <footer>
-
     </footer>
     <script src="js/script.js"></script>
 </body>

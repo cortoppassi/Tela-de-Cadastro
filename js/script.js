@@ -3,6 +3,7 @@ const cadastrados = []
 
 const telaDeCadastro = document.getElementById('telaDeCadastro');
 const telaDeLogin = document.getElementById('telaDeLogin')
+const popup = document.getElementById('popup')
 
 const nome = document.getElementById('cadastroNome');
 const email = document.getElementById('cadastroEmail');
@@ -16,6 +17,7 @@ const estado = document.getElementById('cadastroEstado');
 const nomeLogin = document.getElementById('nome');
 const emailLogin = document.getElementById('email');
 const senhaLogin = document.getElementById('senha');
+
 
 function dadosDeCadastro() {
     var determinarCadastro = {
@@ -46,7 +48,7 @@ function logar() {
             item.email == logar.email &&
             item.senha == logar.senha){
                 salvarNoLocalStorage()
-                alert('ok')
+                abrirPopup()
         }else{
             alert('Usuário não cadastrado.')
         }
@@ -69,3 +71,16 @@ function abrirTelaDeLogin() {
     telaDeCadastro.style.display = 'none'
     telaDeLogin.style.display = 'block'
 };
+
+const abrirPopup = function() {
+    telaDeLogin.style.display = 'none'
+    popup.style.display = 'block'
+    
+    cadastros.map((itens) => {
+        console.log(itens)
+        popup.append(itens.nome);
+    });
+};
+function sair() {
+    popup.style.display = 'none'
+}
