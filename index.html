@@ -10,16 +10,30 @@
 <body>
     <header>
         <input type="button" value="Login" onclick="abrirTelaDeLogin()">
-        <input type="button" value="Cadastre-se" onclick="abrirTelaDeCadastro()">
     </header>
     <section>
         <div id="popup">
             <div id="barraTarefas">
                 <button id="sair" onclick="sair()">X</button>
-            </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#" id="dadosCadastrais" onclick="listarDadosCadastrados()">Dados de Cadastro</a></li>
 
-            <h1>Dados Cadastrais</h1>
+                        <li><a href="#" id="dadosCadastrais" onclick="projetos()">Projetos</a></li>
+                       
+                        <li><a href="#" id="dadosEstudo" onclick="dadosEstudos()">Estudos</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div id="estudos"></div>
         </div>
+
+        <div class="dadosDeCadatro"></div>
+
+        <div class="projetos"></div>
+
+        <div class="estudos"></div>
 
         <div id="telaDeLogin">
             <label>Nome:</label>
@@ -29,6 +43,7 @@
             <label>Senha:</label>
             <input type="password" name="senha" id="senha" placeholder="Senha">
             <input type="submit" value="Entrar" onclick="logar()">
+            <h6>Ainda não é cadastrado? <a href="#" onclick="abrirTelaDeCadastro()">Clique aqui!</a></h3>
         </div>
         <div id="telaDeCadastro">
             <label>Nome:</label>

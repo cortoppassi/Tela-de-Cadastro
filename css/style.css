@@ -51,7 +51,6 @@ footer {
 
 #popup {
     display: none;
-    
     width: 90%;
     height: 30em;
     background-color: aliceblue;
@@ -61,16 +60,60 @@ footer {
 
 #barraTarefas {
     display: flex;
-    justify-content: end;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     border: solid 1px;
     background-color: rgb(57, 57, 57);
     padding: 3px; 
+    height: 25px;
+    align-items: center;
+   
 }
 
 #sair {
     border-radius: 3px;
+    height: 25px;
 }
 
 #sair:hover {
  background-color: red;
+}
+
+:root {
+    --cor-fundo: rgb(45, 45, 43);
+    --cor-hover: rgba(0, 0, 0, 0.229);
+    --cor-Primaria: rgb(57, 57, 57);
+}
+
+a {
+   color: aliceblue;
+   height: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    
+}
+
+.menu li {
+    display: inline-block;
+    
+}
+
+.menu ul li a {
+    display: block;
+    background-color: var(--cor-Primaria);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu ul li a:hover {
+    background-color: var(--cor-hover);
+    border-radius: 20px 0px 20px 0px;
+    transform: scale(0.89);
+    border: solid 1px;
+}
+
+#estudos {
+    display: none;
 }

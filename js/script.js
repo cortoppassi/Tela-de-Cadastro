@@ -18,7 +18,6 @@ const nomeLogin = document.getElementById('nome');
 const emailLogin = document.getElementById('email');
 const senhaLogin = document.getElementById('senha');
 
-
 function dadosDeCadastro() {
     var determinarCadastro = {
         nome: nome.value,
@@ -47,11 +46,11 @@ function logar() {
             (item.nome == logar.nome &&
             item.email == logar.email &&
             item.senha == logar.senha){
-                salvarNoLocalStorage()
-                abrirPopup()
+            salvarNoLocalStorage()
+            abrirPopup()
         }else{
             alert('Usuário não cadastrado.')
-        }
+        };
     });
 };
 
@@ -60,13 +59,14 @@ function salvarNoLocalStorage() {
 };
 
 function buscarNoLocalStorage() {
-    const storage = JSON.parse(localStorage.getItem(cadastros))
+    const storage = JSON.parse(localStorage.getItem(cadastros));
 };
 
 function abrirTelaDeCadastro() {
     telaDeCadastro.style.display = 'block'
     telaDeLogin.style.display = 'none'
 };
+
 function abrirTelaDeLogin() {
     telaDeCadastro.style.display = 'none'
     telaDeLogin.style.display = 'block'
@@ -75,12 +75,39 @@ function abrirTelaDeLogin() {
 const abrirPopup = function() {
     telaDeLogin.style.display = 'none'
     popup.style.display = 'block'
-    
-    cadastros.map((itens) => {
-        console.log(itens)
-        popup.append(itens.nome);
-    });
 };
+
 function sair() {
     popup.style.display = 'none'
+    telaDeLogin.style.display = 'block'
+};
+
+const listarDadosCadastrados = function() {
+    cadastros.map((itens) => {
+       console.log(itens)
+       popup.append(itens.nome)
+       
+    });
+};
+
+const projetos = function() {
+alert('ok')
 }
+
+function dadosEstudos() {
+    const elementoText = document.createElement("input");
+    popup.appendChild(elementoText);
+
+    const elementoInput = document.createElement("button")
+    elementoInput.innerHTML = 'Salvar'
+
+    elementoInput.onclick = function() {
+         alert('ok')
+    };
+
+    popup.appendChild(elementoInput);
+};
+
+function limpar() {
+   popup.innerHTML = ''
+};
