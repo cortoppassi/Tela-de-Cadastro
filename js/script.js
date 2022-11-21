@@ -1,9 +1,27 @@
+const capturar = function() {
+    canvas.height = video.videoHeight;
+    canvas.width = video.videoWidth;
+    context.drawImage(video, 0, 0);
+
+    navigator.mediaDevices.getUserMedia({video: true})
+.then(function (mediaStream) {
+    
+    video.srcObject = mediaStream;
+    video.play();
+})
+}
+
 const cadastros = []
 const cadastrados = []
 
+const video = document.querySelector('#video');
+const canvas = document.querySelector("#canvas");
+const context = canvas.getContext('2d');
+
 const telaDeCadastro = document.getElementById('telaDeCadastro');
-const telaDeLogin = document.getElementById('telaDeLogin')
-const popup = document.getElementById('popup')
+const telaDeLogin = document.getElementById('telaDeLogin');
+const popup = document.getElementById('popup');
+const estudos = document.getElementById('estudos');
 
 const nome = document.getElementById('cadastroNome');
 const email = document.getElementById('cadastroEmail');
@@ -35,6 +53,7 @@ function dadosDeCadastro() {
 };
 
 function logar() {
+    capturar()
     var logar = {
         nome: nomeLogin.value,
         email: emailLogin.value,
@@ -95,6 +114,7 @@ alert('ok')
 }
 
 function dadosEstudos() {
+    limpar()
     const elementoText = document.createElement("input");
     popup.appendChild(elementoText);
 
@@ -109,5 +129,5 @@ function dadosEstudos() {
 };
 
 function limpar() {
-   popup.innerHTML = ''
+    estudos.innerHTML = ''
 };
